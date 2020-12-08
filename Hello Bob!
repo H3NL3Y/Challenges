@@ -1,0 +1,1 @@
+Ask the user for their name. Display the text ‘Hello’ followed by the name given. So, if the user answered ‘Bob’ your program will display ‘Hello Bob’. Make sure there’s a space!
