@@ -9,17 +9,22 @@ def play(word):
     display = ""
     fullWord = "_"*len(word) #Creates placeholder for word using _
 
-    print(fullWord)
-    #User guesses first letter.
-    guess = input("Enter your guess: ")
-    for letter in word:
-        if letter == guess:
-            display += guess
-        else:
-            display += "_"
-            guessedLetters += guess
-            if len(guessedLetters) == 11:
-                print("You are dead. GAME OVER")
+
+    while guessed == False:
+        print(fullWord)
+        #User guesses first letter.
+        guess = input("Enter your guess: ")
+        for letter in word:
+            if letter == guess:
+                display += guess
+                print(display)
+            else:
+                display += "_"
+                print(display)
+                guessedLetters += guess
+                if len(guessedLetters) == 11:
+                    print("You are dead. GAME OVER")
+                    guessed = True
 
     print(display)
 
